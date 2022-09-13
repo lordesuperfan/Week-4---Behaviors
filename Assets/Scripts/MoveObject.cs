@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    float moveSpeed;
     [SerializeField] Vector3 moveDirection;
 
-    float totalMoveDistance;
+    [SerializeField] GameObject stationarySphere; 
+
+    [SerializeField] float totalMoveDistance;
     Vector3 startingLocation;   
 
     // Start is called before the first frame update
@@ -27,7 +29,7 @@ public class MoveObject : MonoBehaviour
             FlipMoveDirection();
         }
 
-        //gameObject.transform.Translate(moveDirection * moveSpeed);
+        gameObject.transform.Translate(moveDirection * moveSpeed);
     }
 
     void FlipMoveDirection()
