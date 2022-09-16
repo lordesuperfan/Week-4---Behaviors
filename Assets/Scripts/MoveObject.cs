@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
-    float moveSpeed;
+    [SerializeField] float moveSpeed;
     [SerializeField] Vector3 moveDirection;
 
     [SerializeField] GameObject stationarySphere; 
