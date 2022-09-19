@@ -9,7 +9,7 @@ public class MovementActivator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objectToActivate.GetComponent<MoveObject>().enabled = true;
+        objectToActivate.GetComponent<MoveObject>().enabled = false;
     }
 
     // Update is called once per frame
@@ -20,7 +20,21 @@ public class MovementActivator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger!");
         objectToActivate.GetComponent<MoveObject>().enabled = true;
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Trigger!");
+        objectToActivate.GetComponent<MoveObject>().enabled = true;
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Trigger off!");
+        objectToActivate.GetComponent<MoveObject>().enabled = false;
 
     }
 }

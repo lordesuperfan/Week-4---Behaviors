@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
+    [SerializeField] float moveSpeed = 0.1f;
     [SerializeField] Vector3 moveDirection;
 
-    [SerializeField] GameObject stationarySphere; 
+    
 
     [SerializeField] float totalMoveDistance;
     Vector3 startingLocation;   
